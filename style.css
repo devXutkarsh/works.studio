@@ -1,0 +1,362 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap'); */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "freight-big-pro";
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+::selection {
+  background-color: rgba(25, 230, 245, 0.921);
+}
+.main {
+  width: 100%;
+  background-color: #000;
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #c98e8eb6;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+#yellow1 {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #f5e41b;
+  z-index: 8;
+}
+#yellow2 {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background-color: #f5e41b;
+  z-index: 7;
+}
+.loader video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 6;
+}
+.loader h1 {
+  text-transform: uppercase;
+  font-weight: 9;
+  letter-spacing: -3px;
+  font-size: 5vw;
+  text-align: center;
+  line-height: 1;
+  color: #fff;
+  z-index: 9;
+  position: relative;
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5e41b;
+  padding: 0 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+nav {
+  width: 100%;
+  height: 10vh;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* display: none; */
+  z-index: 99;
+  position: absolute;
+  padding: 1vw 2vw;
+}
+nav svg path {
+  fill: #000;
+
+}
+nav p {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav p a {
+  text-decoration: none;
+  color: rgb(31, 3, 3);
+  font-weight: 400;
+  margin: 0 10px;
+  padding: 5px;
+}
+a:hover {
+  border-bottom: 2px solid black;
+}
+#cross {
+  padding-left: 5px;
+  color: gray;
+  /* width: 50px;
+  height: 50px; */
+}
+.page1 h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: -3px;
+  font-size: 5vw;
+  /* font-family: "italic"; */
+  text-align: center;
+  line-height: 1;
+  color: #000;
+}
+.page2 {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+}
+.elem {
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  /* transition: 0.5s all ease-in; */
+}
+.blur {
+  position: absolute;
+  right: 40%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  background: linear-gradient(to right, #f5e41b, #f5e41b, #f5e41b);
+  width: 30%;
+  height: 100%;
+  z-index: 8;
+  /* box-shadow: 10px 0 20px 20px#f5e41b, -10px 0 20px 100px #f5e41b;   */
+  border: none;
+}
+.elem h2 {
+  text-transform: uppercase;
+  font-size: 7.5vw;
+  line-height: 6vw;
+  font-weight: 100;
+  z-index: 9;
+  position: relative;
+}
+.elem .moving {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -45%) scaleY(0);
+  transition: 0.5s ease-in;
+  background-color: #f5e41b;
+}
+.elem:hover h2 {
+  font-style: italic;
+}
+.elem:hover .moving h5 {
+  opacity: 1;
+}
+.elem:hover .moving {
+  transform: translate(0, -45%) scaleY(1);
+}
+.moving .moving-in {
+  display: inline-block;
+  padding: 10px 0;
+  animation: move;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.moving .moving-in h5 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: gilroy;
+  margin-right: 35px;
+  color: #000;
+  transition-delay: 0.2s;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+}
+
+@keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+  from {
+    transform: translateX(0%);
+  }
+}
+
+.page3 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+.image-container {
+  padding: 10px;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.images {
+  width: 30vw;
+  height: 40vw;
+  position: relative;
+  transition: all ease 0.5s;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.imgShort{
+  width: 30vw;
+  height: 20vw;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #00000061;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  transition: all ease 0.5s;
+}
+.overlay p {
+  font-size: 3.5vw;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: italic;
+  line-height: 3vw;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+
+.images:hover .overlay {
+  background-color: #000;
+  transition: 0.5s all ease-in scale(2);
+  z-index: 9;
+}
+.images:hover .overlay p {
+  opacity: 1;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  /* transition: all ease 0.5s; */
+}
+.images:hover img {
+  scale: 1.1;
+  transition: 0.2s all ease-in;
+}
+.footer {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  flex-direction: column;
+}
+.footer h2 {
+  font-size: 1.5vw;
+  font-style: italic;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  font-weight: 400;
+}
+.footer h2 span{
+  padding-left: 50px;
+}
+.foot {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+@media (max-width: 500px) {
+  nav p{
+  display: none;
+  }
+  .loader h1{
+    font-size: 11vw;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+  }
+ nav{
+  padding: 5px 10px;
+ }
+  nav svg {
+   padding-left: 10px;
+  }
+  .page1 h1{
+    font-size: 11vw;
+    text-align: center;
+    font-style: italic;
+  }
+  .overlay p{
+    font-size: 10vw;
+    line-height: 40px;
+  }
+  .elem h2 {
+    font-size: 10vw;
+    line-height: 1;
+  }
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .image-container .images{
+    width: 100vw;
+    height: 100%;
+    margin: 5px 5px;
+   
+  }
+  .foot{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+  .footer h2{
+    font-size: 4vw;
+  }
+  .foot p{
+    margin: 5px ;
+  }
+
+}
